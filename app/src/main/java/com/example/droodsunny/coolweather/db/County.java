@@ -44,11 +44,7 @@ public class County extends DataSupport {
         this.countyName = countyName;
     }
 
-
-
     private String countyName;
-
-
 
     public County() {
     }

@@ -32,9 +32,9 @@ public class AutoUpdateService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
         updateWeather();
         updateBingpic();
+        //定时启动
         AlarmManager manager=(AlarmManager)getSystemService(ALARM_SERVICE);
         int anHour=4*60*60*1000;
         long tri= SystemClock.elapsedRealtime()+anHour;

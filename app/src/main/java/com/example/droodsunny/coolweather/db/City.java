@@ -11,10 +11,8 @@ public class City extends DataSupport {
     private String cityName;
     private int cityCodee;
     private int provinceId;
-
     public City() {
     }
-
     public int getProvinceId() {
         return provinceId;
     }

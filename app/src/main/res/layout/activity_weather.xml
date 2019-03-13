@@ -2,54 +2,65 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@android:color/black"
-
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/transparent">
+
     <ImageView
         android:id="@+id/bing_pic_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
+
     <android.support.v4.widget.DrawerLayout
-        android:fitsSystemWindows="true"
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
 
+        <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/swipe_refresh"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <android.support.design.widget.CoordinatorLayout
                 android:id="@+id/weatherLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <android.support.design.widget.AppBarLayout
-                    android:background="#8000"
                     android:id="@+id/appBar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    >
+
                     <android.support.design.widget.CollapsingToolbarLayout
                         android:id="@+id/collapsing_toolbar"
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:contentScrim="@android:color/black"
+                        android:background="@android:color/transparent"
                         app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
                         <android.support.v7.widget.CardView
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:layout_marginBottom="15dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
                             app:cardBackgroundColor="#8000"
                             app:cardCornerRadius="5dp"
                             app:cardElevation="0dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+
                                 <include layout="@layout/title" />
+
                                 <include layout="@layout/now" />
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
